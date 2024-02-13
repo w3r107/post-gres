@@ -18,6 +18,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 db.userModel = require("./models/User")(sequelize, Sequelize.DataTypes);
+db.userModel.sync();
 // db.todoModel = require("./models/Tenant")(Sequelize, sequelize);
 
 // db.userModel.hasOne(db.todoModel, { foreignKey: "user_id" });
